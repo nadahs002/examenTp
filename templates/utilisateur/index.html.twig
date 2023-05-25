@@ -1,0 +1,14 @@
+{# <form action="{{ path('your_route') }}" method="POST">
+    {{ form_widget(form) }}
+
+    <button type="submit">Submit</button>
+</form> #}
+
+{% extends 'base.html.twig' %}
+{% block title %}S'inscrire{% endblock %}
+{% block body %}
+{{ form_start(form, {'attr': {'novalidate': 'novalidate'}}) }}
+{{ form_widget(form) }}
+ <button type="submit" class="btn btn-success">Créer</button>
+{{ form_end(form) }}
+{% endblock %}
